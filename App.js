@@ -5,8 +5,11 @@ export default function App() {
   const [word, setWord] = useState("niggas");
   return (
     <View style={styles.appContainer}>
-      <View>
-        <TextInput placeholder="Your next course goal" />
+      <View style={styles.inputContainer}>
+        <TextInput
+          style={styles.textInput}
+          placeholder="Your next course goal"
+        />
         <Button title="Add goal" />
       </View>
       <View>
@@ -19,5 +22,16 @@ export default function App() {
 const styles = StyleSheet.create({
   appContainer: {
     padding: 50,
+  },
+  inputContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  textInput: {
+    borderWidth: 1,
+    borderColor: "#000000",
+    width: "80%",
+    marginRight: 8,
+    padding: 5,
   },
 });
